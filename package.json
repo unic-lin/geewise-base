@@ -1,0 +1,21 @@
+{
+  "name": "geewise-base",
+  "version": "1.0.0",
+  "description": "<%=private%>",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node ./src/index.js",
+    "test": "pm2 start --name <%=serverName%>",
+    "commit":"git cz"
+  },
+  "keywords": [],
+  "author": "<%=author%>",
+  "license": "<%=license%>",
+  "dependencies": {
+    "config": "^3.3.3",
+    "log4js": "^6.3.0"
+  },
+  "devDependencies": {
+    "commitizen": "^4.2.3"
+  }
+}
