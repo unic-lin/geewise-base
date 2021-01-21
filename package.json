@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "node ./src/index.js",
     "test": "pm2 start --name <%=serverName%>",
-    "commit":"git cz"
+    "commit": "git cz"
   },
   "keywords": [],
   "author": "<%=author%>",
@@ -16,6 +16,12 @@
     "log4js": "^6.3.0"
   },
   "devDependencies": {
-    "commitizen": "^4.2.3"
+    "commitizen": "^4.2.3",
+    "cz-conventional-changelog": "^3.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
