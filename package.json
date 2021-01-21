@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "node ./src/index.js",
-    "test": "pm2 start --name <%=serverName%>",
+    "test": "cross-env NODE_ENV=test pm2 start --name <%=serverName%>-test ./src/index.js",
+    "prod": "cross-env NODE_ENV=production pm2 start --name <%=serverName%>-prod ./src/index.js",
     "commit": "git cz"
   },
   "keywords": [],
@@ -17,6 +18,7 @@
   },
   "devDependencies": {
     "commitizen": "^4.2.3",
+    "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0"
   },
   "config": {
